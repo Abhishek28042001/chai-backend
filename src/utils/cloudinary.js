@@ -15,10 +15,10 @@ const uploadOnCloudinary = async (localFilePath) => {
             resource_type: "auto"
         });
         // file has been uploaded
-        console.log("file is uploaded on cloudinary ", response.url);
-        console.log("file is uploaded on cloudinary ", response);
+        console.log("URL of file is uploaded on cloudinary ", response.url);
+        console.log("Response of file is uploaded on cloudinary ", response);
 
-        return response.url;
+        return response;
 
     } catch (error) {
         // remove file from local storage
@@ -26,3 +26,5 @@ const uploadOnCloudinary = async (localFilePath) => {
         return null;
     }
 }
+
+export {uploadOnCloudinary};
